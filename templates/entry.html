@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h2>{{ the_title }}</h2>
+
+<form method='POST' action='/pick_a_capital'>
+<table>
+<th colspan="2">请选取你想要的国家：</th>
+<tr><td>国家: </td><td><select id="CerType" type="national_GDP" name="user_national_GDP">
+	  <option value="1" selected>中国</option>
+	  <option value="2" selected>印度</option>
+	  <option value="3" selected>文莱</option>
+	  <option value="4" selected>阿富汗</option>
+	  <option value="5" selected>乌克兰</option>
+	  <option value="6" selected>美国</option>
+	  <option value="7" selected>加拿大</option>
+	  <option value="8" selected>希腊</option>
+	  <option value="9" selected>西班牙</option>
+	  <option value="10" selected>埃及</option>
+	  <option value="11" selected>香港</option>
+	  <option value="12" selected>新加坡</option>
+	  <option value="13" selected>奥地利</option>
+	  <option value="14" selected>新西兰</option>
+	  <option value="15" selected>匈牙利</option>
+	  <option value="16" selected>巴拿马</option>
+	  <option value="17" selected>叙利亚</option>
+	  <option value="18" selected>巴西</option>
+	  <option value="19" selected>俄罗斯</option>
+	  <option value="20" selected>也门</option>
+	  <option value="21" selected>伊拉克</option>
+	  <option value="22" selected>伊朗</option>
+	  <option value="23" selected>以色列</option>
+	  <option value="24" selected>意大利</option>
+	  <option value="25" selected>泰国</option>
+	  <option value="26" selected>印度尼西亚</option>
+	  <option value="27" selected>英国</option>
+	  <option value="28" selected>朝鲜</option>
+	  <option value="29" selected>韩国</option>
+	  <option value="30" selected>日本</option>
+	  <option value="31" selected>越南</option>
+	  <option value="32" selected>法国</option>
+	  <option value="33" selected>德国</option>
+	  <option value="34" selected>荷兰</option>
+	  <option value="35" selected>尼泊尔</option>
+	  <option value="36" selected>土耳其</option>
+	  <option value="37" selected>瑞士</option>
+	  <option value="37" selected>请选择国家</option>
+	  </tr>
+	 </select></td>
+</table>
+<p>确认并开始查询：</p>
+<p><input value='完成！' type='SUBMIT'></p>
+</form>
+
+{% endblock %}
