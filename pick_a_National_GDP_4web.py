@@ -1,11 +1,11 @@
- # -*- coding: utf-8 -*- 
+# -*- coding: utf-8 -*- 
 # 使用模块module country
 import country  
 c = country.country_list_name()
 c_list = [c.data[k] for k in sorted(c.data.keys())]
 c_dict_reverse = {v:k for k, v in c.data.items()}
 
- from flask import Flask, render_template, request, escape
+from flask import Flask, render_template, request, escape
 
 app = Flask(__name__)
 
@@ -20,7 +20,7 @@ def entry_page() -> 'html':
 @app.route('/pick_a_national_GDP', methods=['POST'])
 def pick_a_color() -> 'html':
     """提取用户web 请求POST方法提交的数据（输入），不执行任何动作（处理），直接返回（输出）。"""
-   user_country_name = request.form['user_country']	
+    user_country_name = request.form['user_country']	
     user_country_GDP = c_dict_reverse[user_country_name]	
     return render_template('results.html',
                            the_title = '以下是您选取的国家：',
