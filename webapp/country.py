@@ -11,7 +11,7 @@ class country_list_name (object):
            fieldnames = reader.fieldnames
 
            list_dict_country = []
-           for row in reader:
+           ###for row in reader:
                   list_dict_country.append(dict(row))
 
            self.data = {d['c_code']:d['c_name'] for d in list_dict_country}
