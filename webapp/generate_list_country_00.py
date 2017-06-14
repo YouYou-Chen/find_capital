@@ -21,6 +21,6 @@ print (list_dict_country)
 # 中： http://python.usyiyi.cn/translate/python_352/library/csv.html
 import csv
 with open('data\country.tsv', 'w', encoding='utf8') as csvfile:
-    fieldnames = ['c_GDP', 'c_name']
-    writer = csv.DictWriter(csvfile, fieldnames=['c_GDP', 'c_name'])
+    fieldnames = ['c_code', 'c_name']
+    writer = csv.DictWriter(csvfile, fieldnames=['c_code', 'c_name'])
     writer.writerows (list_dict_country)
