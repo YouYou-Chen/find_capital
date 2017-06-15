@@ -22,12 +22,12 @@ def entry_page() -> 'html':
 @app.route('/pick_a_country', methods=['POST'])
 def pick_a_color() -> 'html':
     """提取用户web 请求POST方法提交的数据（输入），不执行任何动作（处理），直接返回（输出）。"""
-    user_country_name = request.form['user_country']	
-    user_country_code = c_dict_reverse[user_country_name]	
+    user_National_GDP_name = request.form['user_National_GDP']	
+    user_National_GDP_code = c_dict_reverse[user_National_GDP_name]	
     return render_template('results.html',
                            the_title = '以下是您选取的国：',
-                           the_country_code = user_country_code,
-                           the_country_name = user_country_name,
+                           the_National_GDP_code = user_National_GDP_code,
+                           the_National_GDP_name = user_National_GDP_name,
                            )
 
 if __name__ == '__main__':
