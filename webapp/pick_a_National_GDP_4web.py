@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*- 
 # 使用模块module National_GDP
+
 import National_GDP  
 c = National_GDP.National_GDP_list_name()
 c_list = [c.data[k] for k in sorted(c.data.keys())]
