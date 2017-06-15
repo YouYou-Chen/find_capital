@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*- 
 
-
+# 使用requests模块，去github取国家代码及简中国家名称数据
+import requests
+page = requests.get('https://raw.githubusercontent.com/hanteng/country-selector/master/data/zh-Hans/territories.json')
+data = page.json()
 
 # 列表推导只取有:的
 data_National_GDP = [x for x in data if ":" in x]
