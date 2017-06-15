@@ -19,4 +19,9 @@ def country_name(c_code=''):
     c_name =  d.get(c_code, None)
     return (c_name)
 
-
+#測試   
+print (_name('CN'))
+print (National_GDP_name('SG'))
+print (National_GDP_name('ZZ'))
+print (National_GDP_name('ABC'))
+print (National_GDP_name(''))

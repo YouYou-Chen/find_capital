@@ -22,5 +22,12 @@ class National_GDP_list_name (object):
 
 c = National_GDP_list_name()
 
+#測試   
+print (c.National_GDP_name('CN'))
+print (c.National_GDP_name('SG'))
+print (c.National_GDP_name('ZZ'))
+print (c.National_GDP_name('ABC'))
+print (c.National_GDP_name(''))
+
 
  
