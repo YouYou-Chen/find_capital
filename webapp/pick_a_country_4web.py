@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*- 
-# 使用模块module country
+# 使用模块module national
 import national  
 c = national.national_list_name()
 c_list = [c.data[k] for k in sorted(c.data.keys())]
