@@ -4,7 +4,7 @@
 """创建一个类"""
 class National_GDP_list_name (object):
 
-    def __init__(self, fn='data/National_GDP.tsv'):
+    def __init__(self, fn='data\National_GDP.tsv'):
        import csv
        with open(fn, 'r', encoding='utf8') as csvfile:
            reader = csv.DictReader(csvfile, fieldnames=['c_code', 'c_name'], delimiter='\t')
@@ -19,4 +19,5 @@ class National_GDP_list_name (object):
     def National_GDP_name(self, c_code=''):
         c_name =  self.data.get(c_code, None)
         return (c_name)
+
 
