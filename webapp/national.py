@@ -2,7 +2,7 @@
 # 类化，以备模块
 
 """创建一个类"""
-class country_list_name (object):
+class national_list_name (object):
 
     def __init__(self, fn='data\national.tsv'):
        import csv
