@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*- 
-# 使用模块module National_GDP
-
-import National_GDP  
-c = National_GDP.National_GDP_list_name()
+# 使用模块module country
+import country  
+c = country.country_list_name()
 c_list = [c.data[k] for k in sorted(c.data.keys())]
 c_dict_reverse = {v:k for k, v in c.data.items()}
 
@@ -23,12 +22,12 @@ def entry_page() -> 'html':
 @app.route('/pick_a_country', methods=['POST'])
 def pick_a_color() -> 'html':
     """提取用户web 请求POST方法提交的数据（输入），不执行任何动作（处理），直接返回（输出）。"""
-    user_National_GDP_name = request.form['user_National_GDP']	
-    user_National_GDP_code = c_dict_reverse[user_National_GDP_name]	
+    user_country_name = request.form['user_country']	
+    user_country_code = c_dict_reverse[user_country_name]	
     return render_template('results.html',
                            the_title = '以下是您选取的国：',
-                           the_National_GDP_code = user_National_GDP_code,
-                           the_National_GDP_name = user_National_GDP_name,
+                           the_country_code = user_country_code,
+                           the_country_name = user_country_name,
                            )
 
 if __name__ == '__main__':
