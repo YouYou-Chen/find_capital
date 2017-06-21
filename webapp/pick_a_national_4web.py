@@ -19,7 +19,7 @@ def entry_page() -> 'html':
                            the_list_items = c_list ,
                            the_title='欢迎来到网上选国！')
 
-@app.route('/pick_a_country', methods=['POST'])
+@app.route('/pick_a_national', methods=['POST'])
 def pick_a_color() -> 'html':
     """提取用户web 请求POST方法提交的数据（输入），不执行任何动作（处理），直接返回（输出）。"""
     user_country_name = request.form['user_country']	
