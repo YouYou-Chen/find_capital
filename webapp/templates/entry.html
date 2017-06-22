@@ -8,7 +8,7 @@
 <table>
 <th colspan="2">请选取国家：</th>
 <tr><td>国家: </td><td>
-  <select name='user_country'>
+  <select name='user_country'><input type="country" name="user_country" /></td></tr>
   {% for item in the_list_items %}
     <option value="{{item}}">{{item}}</option>
   {% endfor %}
