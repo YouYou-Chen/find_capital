@@ -7,7 +7,7 @@
 <form method='POST' action='/pick_a_country'>
 <table>
 <th colspan="2">请选取国家：</th>
-<tr><td>国家: </td><td><input type="country" name="user_country" /></td></tr>
+<tr><td>国家: </td><td>
   <select name='user_country'>
   {% for item in the_list_items %}
     <option value="{{item}}">{{item}}</option>
