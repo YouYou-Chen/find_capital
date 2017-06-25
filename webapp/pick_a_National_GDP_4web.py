@@ -1,11 +1,10 @@
 # -*- coding: utf-8 -*- 
+# 使用模块module national
+import national  
+c = national.national_list_name()
+c_list = [c.data[k] for k in sorted(c.data.keys())]
+c_dict_reverse = {v:k for k, v in c.data.items()}
 
-# 用pandas 读入 国家数据分省数据指标
-import pandas as pd
-df = pd.DataFrame.from_csv("data/national.tsv", encoding='utf8', sep='\t')
-df = df.fillna('<i>（缺省值）</i>')   # nan 用  '（缺省值）' 代替
-meta = df.set_index('code').to_dict()
-print("指标有",len(meta['cname']),'个')
 
 from flask import Flask, render_template, request, escape
 
