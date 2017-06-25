@@ -25,7 +25,7 @@ def entry_page() -> 'html':
 def pick_a_color() -> 'html':
 	user_national_ISO= request.form['user_ISO']
 	user_national_WEO_Subject_Code= request.form['user_WEO_Subject_Code']
-	with open('WEOApr2017all.tsv', 'r', encoding='utf8') as national_data:
+	with open('national.tsv', 'r', encoding='utf8') as national_data:
 		line = national_data.readlines()
 	want_ISO=[i for i in line if user_national_ISO in i]
 	want_WEO=[i for i in want_ISO if user_national_WEO_Subject_Code in i]
@@ -74,17 +74,14 @@ def pick_a_color() -> 'html':
 		N=want_nation[i].split('\t')[48]
 		O=want_nation[i].split('\t')[49]
 		P=want_nation[i].split('\t')[50]
-				
-		
-		
 		result_nation=sorted(result_nation)
 		
 		
 	return render_template('results.html',
 							the_title = '以下是您筛选后的结果：',
-							the_national_code= result_nation,
-							the_national_ISO_code =user_national_ISO,
-							the_national_WEO_Subject_Code_code =user_national_WEO_Subject_Code,
+							the_national = result_nation,
+							the_national_ISO =user_national_ISO,
+							the_national_WEO_Subject_Code = user_national_WEO_Subject_Code,
 					
 							)
 
