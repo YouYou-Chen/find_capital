@@ -4,19 +4,14 @@
 
 <h2>{{ the_title }}</h2>
 
-<form method='POST' action='/pick_a_national'>
+<form method='POST' action='/pick_a_zb'>
 <table>
-<th colspan="2">请选取ISO和指标：</th>
+<th colspan="2">请选取ISO，共有{{the_zb_number}}个指标可查：</th>
 <tr><td>ISO: </td><td>
-  <select name='user_national_ISO'> 
-  {% for item in the_list_items %}
-    <option value="{{item}}">{{item}}</option>
-  {% endfor %}
-  </select>
-<tr><td>指标: </td><td>
-  <select name='user_national_WEO_Subject_Code'> 
-  {% for item in the_list_items %}
-    <option value="{{item}}">{{item}}</option>
+  <input type="text" list="zbs" name='user_zb'><!-- 此list对映到 datalist的 id, 此name为提交时之变数名-->
+  <datalist id="zbs">
+  {% for k, v in the_list_items.items() %}
+    <option value="{{k}}">{{v}}</option>
   {% endfor %}
   </select>
 </td></tr>
@@ -26,7 +21,6 @@
 </form>
 
 {% endblock %}
-
 
 
 

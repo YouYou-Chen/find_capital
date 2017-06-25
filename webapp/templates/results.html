@@ -4,11 +4,13 @@
 
 <h2>{{ the_title }}</h2>
 
-<p>您选取的是：</p>
+<p>您选取的结果是：</p>
 <table>
-<tr><td>国家名：</td><td>{{ the_national_ISO_name }}</td></tr>
-<tr><td>国家指标：</td><td>{{ the_national_WEO_Subject_Code_code }}</td></tr>
-<tr><td>筛选后的结果情况：</td><td>{{ the_national_code }}</td></tr>
+<tr><td>ISO：</td><td>{{ the_zb }}</td></tr>
+<tr><td>指标：</td><td>{{ the_zb_WEO_Subject_Code }}</td></tr>
+<tr><td>1980</td><td>{{ the_zb_1980 |safe}}</td></tr>
+<tr><td>1981：</td><td>{{ the_zb_1981 |safe}}</td></tr>
+<tr><td>1982：</td><td>{{ the_zb_1982 |safe}}</td></tr>
 </table>
 
 {% endblock %}
