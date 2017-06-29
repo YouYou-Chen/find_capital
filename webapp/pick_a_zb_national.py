@@ -4,7 +4,7 @@
 import pandas as pd
 df = pd.DataFrame.from_csv("data/fsnd_national.tsv", encoding='utf8', sep='\t')
 df = df.fillna('<i>（缺省值）</i>')   # nan 用  '（缺省值）' 代替
-national = df.set_index('ISO').to_dict()
+national = df.set_index('ISO2_or_country_name').to_dict()
 print("指标有",len(national['WEO_Subject_Code']),'个')
 
 
@@ -33,7 +33,8 @@ def pick_a_zb() -> 'html':
                            the_title = '以下是您选取的结果：',
                            the_zb = user_zb,
                            the_zb_WEO_Subject_Code = national['WEO_Subject_Code'][user_zb],
-                           the_zb_1980   = national['1980'][user_zb],
+                           the_zb_Scale  = national['Scale'][user_zb],
+						   the_zb_1980   = national['1980'][user_zb],
                            the_zb_1981   = national['1981'][user_zb],
                            the_zb_1982   = national['1982'][user_zb],
 						   the_zb_1983   = national['1983'][user_zb],
